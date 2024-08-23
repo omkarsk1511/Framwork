@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CrossBrowser" parallel="classes" thread-count="64">
+	<listeners>
+		<listener class-name="mocktest.utility.ListenerClass" />
+	</listeners>
+
+	<test name="ChromeTest">
+		<parameter name="browser" value="Chrome"></parameter>
+		<classes>
+            <class name="mocktest.testcases.LoginPageTest"/>
+		    <class name="mocktest.testcases.LoginTest"/>
+		    <class name="mocktest.testcases.HomePageTest"/>
+		    <class name="mocktest.testcases.OfferingsPageTest"/>
+			<class name="mocktest.testcases.AddOfferingsTest"/>
+			<class name="mocktest.testcases.AcademicCyclePageTest"/>
+			<class name="mocktest.testcases.AddAcademiccyclePageTest"/>  
+			<class name="mocktest.testcases.BatchesPageTest"/>
+			<class name="mocktest.testcases.AddBatchTest"/> 
+			<class name="mocktest.testcases.TestPropageTest"/>
+			<class name="mocktest.testcases.Mocktest1"/>
+		</classes>
+	</test>
+
+	<test name="FirefoxTest">
+		<parameter name="browser" value="Firefox"></parameter>
+		<classes>
+            <class name="mocktest.testcases.LoginPageTest"/>
+		    <class name="mocktest.testcases.LoginTest"/>
+		    <class name="mocktest.testcases.HomePageTest"/>
+		    <class name="mocktest.testcases.OfferingsPageTest"/>
+			<class name="mocktest.testcases.AddOfferingsTest"/>
+			<class name="mocktest.testcases.AcademicCyclePageTest"/>
+			<class name="mocktest.testcases.AddAcademiccyclePageTest"/>  
+			<class name="mocktest.testcases.BatchesPageTest"/>
+			<class name="mocktest.testcases.AddBatchTest"/> 
+			<class name="mocktest.testcases.TestPropageTest"/>
+			<class name="mocktest.testcases.Mocktest1"/>
+		</classes>
+	</test>
+
+	<test name="EdgeTest">
+		<parameter name="browser" value="Edge"></parameter>
+		<classes>
+            <class name="mocktest.testcases.LoginPageTest"/>
+		    <class name="mocktest.testcases.LoginTest"/>
+		    <class name="mocktest.testcases.HomePageTest"/>
+		    <class name="mocktest.testcases.OfferingsPageTest"/>
+			<class name="mocktest.testcases.AddOfferingsTest"/>
+			<class name="mocktest.testcases.AcademicCyclePageTest"/>
+			<class name="mocktest.testcases.AddAcademiccyclePageTest"/>  
+			<class name="mocktest.testcases.BatchesPageTest"/>
+			<class name="mocktest.testcases.AddBatchTest"/> 
+			<class name="mocktest.testcases.TestPropageTest"/>
+			<class name="mocktest.testcases.Mocktest1"/>
+		</classes>
+	</test>
+</suite>
+

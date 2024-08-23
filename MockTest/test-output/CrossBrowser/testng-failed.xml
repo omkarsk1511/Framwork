@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="6" parallel="classes" name="Failed suite [CrossBrowser]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="mocktest.utility.ListenerClass"/>
+  </listeners>
+  <test thread-count="6" parallel="classes" name="ChromeTest(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="mocktest.testcases.AddOfferingsTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="addOfferingsTest"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mocktest.testcases.AddOfferingsTest -->
+      <class name="mocktest.testcases.BatchesPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="afterSuite"/>
+          <include name="batchesPagePageUrlTest"/>
+          <include name="loadConfig"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mocktest.testcases.BatchesPageTest -->
+      <class name="mocktest.testcases.AddBatchTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+          <include name="addBatchTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mocktest.testcases.AddBatchTest -->
+      <class name="mocktest.testcases.AcademicCyclePageTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+          <include name="academicCyclePageUrlTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mocktest.testcases.AcademicCyclePageTest -->
+      <class name="mocktest.testcases.Mocktest1">
+        <methods>
+          <include name="mockExam1Test"/>
+          <include name="afterSuite"/>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mocktest.testcases.Mocktest1 -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test thread-count="6" parallel="classes" name="FirefoxTest(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="mocktest.testcases.AddOfferingsTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="addOfferingsTest"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mocktest.testcases.AddOfferingsTest -->
+      <class name="mocktest.testcases.TestPropageTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="loadConfig"/>
+          <include name="tearDown"/>
+          <include name="testProPageTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- mocktest.testcases.TestPropageTest -->
+      <class name="mocktest.testcases.AddAcademiccyclePageTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="addAcademiccycle"/>
+          <include name="loadConfig"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- mocktest.testcases.AddAcademiccyclePageTest -->
+      <class name="mocktest.testcases.BatchesPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="afterSuite"/>
+          <include name="batchesPagePageUrlTest"/>
+          <include name="loadConfig"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mocktest.testcases.BatchesPageTest -->
+      <class name="mocktest.testcases.OfferingsPageTest">
+        <methods>
+          <include name="offeringsPageUrlTest"/>
+          <include name="afterSuite"/>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mocktest.testcases.OfferingsPageTest -->
+      <class name="mocktest.testcases.AddBatchTest">
+        <methods>
+          <include name="setup"/>
+          <include name="afterSuite"/>
+          <include name="loadConfig"/>
+          <include name="addBatchTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mocktest.testcases.AddBatchTest -->
+      <class name="mocktest.testcases.AcademicCyclePageTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="addacademiccycleBtnTest"/>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+          <include name="academicCyclePageUrlTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mocktest.testcases.AcademicCyclePageTest -->
+      <class name="mocktest.testcases.Mocktest1">
+        <methods>
+          <include name="mockExam1Test"/>
+          <include name="afterSuite"/>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mocktest.testcases.Mocktest1 -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+  <test thread-count="6" parallel="classes" name="EdgeTest(failed)">
+    <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="mocktest.testcases.AddOfferingsTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="addOfferingsTest"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mocktest.testcases.AddOfferingsTest -->
+      <class name="mocktest.testcases.BatchesPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="afterSuite"/>
+          <include name="batchesPagePageUrlTest"/>
+          <include name="loadConfig"/>
+          <include name="tearDown"/>
+          <include name="addBatchBtnTest"/>
+        </methods>
+      </class> <!-- mocktest.testcases.BatchesPageTest -->
+      <class name="mocktest.testcases.AddBatchTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+          <include name="addBatchTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mocktest.testcases.AddBatchTest -->
+      <class name="mocktest.testcases.AcademicCyclePageTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="addacademiccycleBtnTest"/>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mocktest.testcases.AcademicCyclePageTest -->
+      <class name="mocktest.testcases.Mocktest1">
+        <methods>
+          <include name="mockExam1Test"/>
+          <include name="afterSuite"/>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mocktest.testcases.Mocktest1 -->
+    </classes>
+  </test> <!-- EdgeTest(failed) -->
+</suite> <!-- Failed suite [CrossBrowser] -->

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-12T14:16:51 IST" name="Suite" finished-at="2024-06-12T14:18:50 IST" duration-ms="119374">
+    <groups>
+      <group name="Smoke">
+        <method signature="cmsquestion.addacademiccycleBtnTest()[pri:1, instance:mocktest.testcases.cmsquestion@f667fe]" name="addacademiccycleBtnTest" class="mocktest.testcases.cmsquestion"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2024-06-12T14:16:51 IST" name="Smoke" finished-at="2024-06-12T14:18:50 IST" duration-ms="119374">
+      <class name="mocktest.testcases.cmsquestion">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:mocktest.testcases.cmsquestion@f667fe]" started-at="2024-06-12T14:16:50 IST" name="loadConfig" finished-at="2024-06-12T14:16:51 IST" duration-ms="255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfig -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:mocktest.testcases.cmsquestion@f667fe]" started-at="2024-06-12T14:16:51 IST" name="setup" finished-at="2024-06-12T14:16:58 IST" duration-ms="6941" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addacademiccycleBtnTest()[pri:1, instance:mocktest.testcases.cmsquestion@f667fe]" started-at="2024-06-12T14:16:58 IST" name="addacademiccycleBtnTest" finished-at="2024-06-12T14:18:50 IST" duration-ms="112377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addacademiccycleBtnTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:mocktest.testcases.cmsquestion@f667fe]" started-at="2024-06-12T14:18:50 IST" name="tearDown" finished-at="2024-06-12T14:18:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:mocktest.testcases.cmsquestion@f667fe]" started-at="2024-06-12T14:18:51 IST" name="afterSuite" finished-at="2024-06-12T14:18:51 IST" duration-ms="605" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- mocktest.testcases.cmsquestion -->
+    </test> <!-- Smoke -->
+  </suite> <!-- Suite -->
+</testng-results>
