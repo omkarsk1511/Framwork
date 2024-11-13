@@ -30,7 +30,7 @@ public class AddMarkTest extends BaseClass {
     public void tearDown() {
         getDriver().quit();
     }
-
+//master
     @Test(groups = { "Smoke", "Sanity" }, priority = 0)
     public void addMarkTest() throws Throwable {
         Log.startTestCase("addMarkTest");
