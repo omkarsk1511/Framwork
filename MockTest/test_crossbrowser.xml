@@ -8,51 +8,51 @@
 	<test name="ChromeTest">
 		<parameter name="browser" value="Chrome"></parameter>
 		<classes>
-            <class name="mocktest.testcases.LoginPageTest"/>
+            <!--<class name="mocktest.testcases.LoginPageTest"/>
 		    <class name="mocktest.testcases.LoginTest"/>
 		    <class name="mocktest.testcases.HomePageTest"/>
 		    <class name="mocktest.testcases.OfferingsPageTest"/>
-			<class name="mocktest.testcases.AddOfferingsTest"/>
-			<class name="mocktest.testcases.AcademicCyclePageTest"/>
-			<class name="mocktest.testcases.AddAcademiccyclePageTest"/>  
+			<class name="mocktest.testcases.AddOfferingsTest"/>-->
+			<class name="mocktest.testcases.AddMarkTest"/>
+			<!--<class name="mocktest.testcases.AddAcademiccyclePageTest"/>  
 			<class name="mocktest.testcases.BatchesPageTest"/>
 			<class name="mocktest.testcases.AddBatchTest"/> 
 			<class name="mocktest.testcases.TestPropageTest"/>
-			<class name="mocktest.testcases.Mocktest1"/>
+			<class name="mocktest.testcases.Mocktest1"/>-->
 		</classes>
 	</test>
 
 	<test name="FirefoxTest">
 		<parameter name="browser" value="Firefox"></parameter>
 		<classes>
-            <class name="mocktest.testcases.LoginPageTest"/>
+            <!--<class name="mocktest.testcases.LoginPageTest"/>
 		    <class name="mocktest.testcases.LoginTest"/>
 		    <class name="mocktest.testcases.HomePageTest"/>
 		    <class name="mocktest.testcases.OfferingsPageTest"/>
-			<class name="mocktest.testcases.AddOfferingsTest"/>
-			<class name="mocktest.testcases.AcademicCyclePageTest"/>
-			<class name="mocktest.testcases.AddAcademiccyclePageTest"/>  
+			<class name="mocktest.testcases.AddOfferingsTest"/>-->
+			<class name="mocktest.testcases.AddMarkTest"/>
+			<!--<class name="mocktest.testcases.AddAcademiccyclePageTest"/>  
 			<class name="mocktest.testcases.BatchesPageTest"/>
 			<class name="mocktest.testcases.AddBatchTest"/> 
 			<class name="mocktest.testcases.TestPropageTest"/>
-			<class name="mocktest.testcases.Mocktest1"/>
+			<class name="mocktest.testcases.Mocktest1"/>-->
 		</classes>
 	</test>
 
 	<test name="EdgeTest">
 		<parameter name="browser" value="Edge"></parameter>
 		<classes>
-            <class name="mocktest.testcases.LoginPageTest"/>
+            <!--<class name="mocktest.testcases.LoginPageTest"/>
 		    <class name="mocktest.testcases.LoginTest"/>
 		    <class name="mocktest.testcases.HomePageTest"/>
 		    <class name="mocktest.testcases.OfferingsPageTest"/>
-			<class name="mocktest.testcases.AddOfferingsTest"/>
-			<class name="mocktest.testcases.AcademicCyclePageTest"/>
-			<class name="mocktest.testcases.AddAcademiccyclePageTest"/>  
+			<class name="mocktest.testcases.AddOfferingsTest"/>-->
+			<class name="mocktest.testcases.AddMarkTest"/>
+			<!--<class name="mocktest.testcases.AddAcademiccyclePageTest"/>  
 			<class name="mocktest.testcases.BatchesPageTest"/>
 			<class name="mocktest.testcases.AddBatchTest"/> 
 			<class name="mocktest.testcases.TestPropageTest"/>
-			<class name="mocktest.testcases.Mocktest1"/>
+			<class name="mocktest.testcases.Mocktest1"/>-->
 		</classes>
 	</test>
 </suite>

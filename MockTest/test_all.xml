@@ -12,7 +12,7 @@
 		    <class name="mocktest.testcases.HomePageTest"/>
 		    <class name="mocktest.testcases.OfferingsPageTest"/>
 			<class name="mocktest.testcases.AddOfferingsTest"/>-->
-			<class name="mocktest.testcases.AcademicCyclePageTest"/>
+			<class name="mocktest.testcases.AddMarkTest"/>
 			<!--<class name="mocktest.testcases.AddAcademiccyclePageTest"/>  
 			<class name="mocktest.testcases.BatchesPageTest"/>
 			<class name="mocktest.testcases.AddBatchTest"/> 

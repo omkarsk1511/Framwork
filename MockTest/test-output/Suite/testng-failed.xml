@@ -4,23 +4,17 @@
   <listeners>
     <listener class-name="mocktest.utility.ListenerClass"/>
   </listeners>
-  <test thread-count="5" name="Smoke(failed)">
+  <test thread-count="5" name="Test_All(failed)">
     <parameter name="browser" value="Chrome"/>
-    <groups>
-      <run>
-        <include name="Smoke"/>
-      </run>
-    </groups>
     <classes>
-      <class name="mocktest.testcases.cmsquestion">
+      <class name="mocktest.testcases.AddMarkTest">
         <methods>
-          <include name="tearDown"/>
           <include name="afterSuite"/>
           <include name="setup"/>
-          <include name="addacademiccycleBtnTest"/>
           <include name="loadConfig"/>
+          <include name="addMarkTest"/>
         </methods>
-      </class> <!-- mocktest.testcases.cmsquestion -->
+      </class> <!-- mocktest.testcases.AddMarkTest -->
     </classes>
-  </test> <!-- Smoke(failed) -->
+  </test> <!-- Test_All(failed) -->
 </suite> <!-- Failed suite [Suite] -->

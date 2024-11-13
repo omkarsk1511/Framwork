@@ -3,15 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mocktest.testcases.cmsquestion">
+      <class name="mocktest.testcases.AcademicCyclePageTest">
         <methods>
-          <include name="tearDown"/>
           <include name="afterSuite"/>
-          <include name="setup"/>
           <include name="addacademiccycleBtnTest"/>
           <include name="loadConfig"/>
+          <include name="setup"/>
+          <include name="academicCyclePageUrlTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- mocktest.testcases.cmsquestion -->
+      </class> <!-- mocktest.testcases.AcademicCyclePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

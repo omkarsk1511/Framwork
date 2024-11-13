@@ -20,8 +20,10 @@ public class HomePage extends BaseClass {
 	@FindBy(xpath ="//span[normalize-space()='TestPro']")
 	private WebElement testProLink;
 	
-	@FindBy(xpath = "//span[normalize-space()='My Institute']")
+	//span[normalize-space()='My Institute']
+	@FindBy(xpath = "//span[normalize-space()='Institute Setup']")
 	private WebElement myInstitute;	
+	
 	
 	@FindBy(xpath = "//li[@class='nk-menu-item has-sub active']//span[@class='nk-menu-text sub-menu'][normalize-space()='Offerings']")
 	private WebElement offerings;	
@@ -33,6 +35,12 @@ public class HomePage extends BaseClass {
 	private WebElement batches;
 	
 	
+	@FindBy(xpath = "//span[normalize-space()='Publish Results']")
+	private WebElement publishResults;
+	
+	@FindBy(xpath = "//span[normalize-space()='Marks Entry']")
+	private WebElement markEntry;
+
 	
 	
 	public HomePage() {
@@ -79,6 +87,13 @@ public class HomePage extends BaseClass {
 		action.JSClick(getDriver(), myInstitute);
 		action.JSClick(getDriver(), batches);
 		return new BatchesPage();
+	}
+	
+	
+	public AddMarkPage clickOnMarkEntry() {
+		action.JSClick(getDriver(), publishResults);
+		action.JSClick(getDriver(), markEntry);
+		return new AddMarkPage();
 	}
 	
 }

@@ -29,7 +29,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import mocktest.actioninterface.ActionInterface;
 import mocktest.base.BaseClass;
 
-
 public class Action extends BaseClass implements ActionInterface {
 
 	@Override
@@ -149,7 +148,7 @@ public class Action extends BaseClass implements ActionInterface {
 	}
 
 	@Override
-	public boolean selectBySendkeys(String value,WebElement ele) {
+	public boolean selectBySendkeys(String value, WebElement ele) {
 		boolean flag = false;
 		try {
 			ele.sendKeys(value);
@@ -160,7 +159,7 @@ public class Action extends BaseClass implements ActionInterface {
 			return false;
 		} finally {
 			if (flag) {
-				System.out.println("Select value from the DropDown");		
+				System.out.println("Select value from the DropDown");
 			} else {
 				System.out.println("Not Selected value from the DropDown");
 				// throw new ElementNotFoundException("", "", "")
@@ -212,7 +211,7 @@ public class Action extends BaseClass implements ActionInterface {
 	 */
 
 	@Override
-	public boolean selectByValue(WebElement element,String value) {
+	public boolean selectByValue(WebElement element, String value) {
 		boolean flag = false;
 		try {
 			Select s = new Select(element);
@@ -315,10 +314,11 @@ public class Action extends BaseClass implements ActionInterface {
 	}
 
 	@Override
-	public boolean switchToFrameByIndex(WebDriver driver,int index) {
+	public boolean switchToFrameByIndex(WebDriver driver, int index) {
 		boolean flag = false;
 		try {
-			new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//iframe")));
+			new WebDriverWait(driver, Duration.ofSeconds(15))
+					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//iframe")));
 			driver.switchTo().frame(index);
 			flag = true;
 			return true;
@@ -341,7 +341,7 @@ public class Action extends BaseClass implements ActionInterface {
 	 * 
 	 */
 	@Override
-	public boolean switchToFrameById(WebDriver driver,String idValue) {
+	public boolean switchToFrameById(WebDriver driver, String idValue) {
 		boolean flag = false;
 		try {
 			driver.switchTo().frame(idValue);
@@ -367,7 +367,7 @@ public class Action extends BaseClass implements ActionInterface {
 	 * 
 	 */
 	@Override
-	public boolean switchToFrameByName(WebDriver driver,String nameValue) {
+	public boolean switchToFrameByName(WebDriver driver, String nameValue) {
 		boolean flag = false;
 		try {
 			driver.switchTo().frame(nameValue);
@@ -405,7 +405,7 @@ public class Action extends BaseClass implements ActionInterface {
 	}
 
 	@Override
-	public void mouseOverElement(WebDriver driver,WebElement element) {
+	public void mouseOverElement(WebDriver driver, WebElement element) {
 		boolean flag = false;
 		try {
 			new Actions(driver).moveToElement(element).build().perform();
@@ -457,8 +457,9 @@ public class Action extends BaseClass implements ActionInterface {
 			 */
 		}
 	}
+
 	@Override
-	public boolean draggable(WebDriver driver,WebElement source, int x, int y) {
+	public boolean draggable(WebDriver driver, WebElement source, int x, int y) {
 		boolean flag = false;
 		try {
 			new Actions(driver).dragAndDropBy(source, x, y).build().perform();
@@ -467,19 +468,20 @@ public class Action extends BaseClass implements ActionInterface {
 			return true;
 
 		} catch (Exception e) {
-		
+
 			return false;
-			
+
 		} finally {
 			if (flag) {
-				System.out.println("Draggable Action is performed on \""+source+"\"");			
-			} else if(!flag) {
-				System.out.println("Draggable action is not performed on \""+source+"\"");
+				System.out.println("Draggable Action is performed on \"" + source + "\"");
+			} else if (!flag) {
+				System.out.println("Draggable action is not performed on \"" + source + "\"");
 			}
 		}
 	}
+
 	@Override
-	public boolean draganddrop(WebDriver driver,WebElement source, WebElement target) {
+	public boolean draganddrop(WebDriver driver, WebElement source, WebElement target) {
 		boolean flag = false;
 		try {
 			new Actions(driver).dragAndDrop(source, target).perform();
@@ -491,14 +493,14 @@ public class Action extends BaseClass implements ActionInterface {
 		} finally {
 			if (flag) {
 				System.out.println("DragAndDrop Action is performed");
-			} else if(!flag) {
+			} else if (!flag) {
 				System.out.println("DragAndDrop Action is not performed");
 			}
 		}
 	}
-	
+
 	@Override
-	public boolean slider(WebDriver driver,WebElement ele, int x, int y) {
+	public boolean slider(WebDriver driver, WebElement ele, int x, int y) {
 		boolean flag = false;
 		try {
 			// new Actions(driver).dragAndDropBy(dragitem, 400, 1).build()
@@ -518,9 +520,9 @@ public class Action extends BaseClass implements ActionInterface {
 			}
 		}
 	}
-	
+
 	@Override
-	public boolean rightclick(WebDriver driver,WebElement ele) {
+	public boolean rightclick(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		try {
 			Actions clicker = new Actions(driver);
@@ -539,25 +541,25 @@ public class Action extends BaseClass implements ActionInterface {
 			}
 		}
 	}
-	
+
 	@Override
-	public boolean switchWindowByTitle(WebDriver driver,String windowTitle, int count) {
+	public boolean switchWindowByTitle(WebDriver driver, String windowTitle, int count) {
 		boolean flag = false;
 		try {
 			Set<String> windowList = driver.getWindowHandles();
 
 			String[] array = windowList.toArray(new String[0]);
 
-			driver.switchTo().window(array[count-1]);
+			driver.switchTo().window(array[count - 1]);
 
-			if (driver.getTitle().contains(windowTitle)){
+			if (driver.getTitle().contains(windowTitle)) {
 				flag = true;
-			}else{
+			} else {
 				flag = false;
 			}
 			return flag;
 		} catch (Exception e) {
-			//flag = true;
+			// flag = true;
 			return false;
 		} finally {
 			if (flag) {
@@ -567,13 +569,14 @@ public class Action extends BaseClass implements ActionInterface {
 			}
 		}
 	}
+
 	@Override
 	public boolean switchToNewWindow(WebDriver driver) {
 		boolean flag = false;
 		try {
 
-			Set<String> s=driver.getWindowHandles();
-			Object popup[]=s.toArray();
+			Set<String> s = driver.getWindowHandles();
+			Object popup[] = s.toArray();
 			driver.switchTo().window(popup[1].toString());
 			flag = true;
 			return flag;
@@ -582,19 +585,20 @@ public class Action extends BaseClass implements ActionInterface {
 			return flag;
 		} finally {
 			if (flag) {
-				System.out.println("Window is Navigated with title");				
+				System.out.println("Window is Navigated with title");
 			} else {
 				System.out.println("The Window with title: is not Selected");
 			}
 		}
 	}
+
 	@Override
 	public boolean switchToOldWindow(WebDriver driver) {
 		boolean flag = false;
 		try {
 
-			Set<String> s=driver.getWindowHandles();
-			Object popup[]=s.toArray();
+			Set<String> s = driver.getWindowHandles();
+			Object popup[] = s.toArray();
 			driver.switchTo().window(popup[0].toString());
 			flag = true;
 			return flag;
@@ -603,12 +607,13 @@ public class Action extends BaseClass implements ActionInterface {
 			return flag;
 		} finally {
 			if (flag) {
-				System.out.println("Focus navigated to the window with title");			
+				System.out.println("Focus navigated to the window with title");
 			} else {
 				System.out.println("The Window with title: is not Selected");
 			}
 		}
 	}
+
 	@Override
 	public int getColumncount(WebElement row) {
 		List<WebElement> columns = row.findElements(By.tagName("td"));
@@ -620,49 +625,68 @@ public class Action extends BaseClass implements ActionInterface {
 		}
 		return a;
 	}
-	
+
 	@Override
 	public int getRowCount(WebElement table) {
 		List<WebElement> rows = table.findElements(By.tagName("tr"));
 		int a = rows.size() - 1;
 		return a;
 	}
-	
-	
+
 	/**
 	 * Verify alert present or not
 	 * 
 	 * @return: Boolean (True: If alert preset, False: If no alert)
 	 * 
 	 */
+
+	/*
+	 * @Override public boolean Alert(WebDriver driver) { boolean presentFlag =
+	 * false; Alert alert = null;
+	 * 
+	 * try { // Check the presence of alert alert = driver.switchTo().alert(); // if
+	 * present consume the alert alert.accept(); presentFlag = true; } catch
+	 * (NoAlertPresentException ex) { // Alert present; set the flag
+	 * 
+	 * // Alert not present ex.printStackTrace(); } finally { if (!presentFlag) {
+	 * System.out.println("The Alert is handled successfully"); } else{
+	 * System.out.println("There was no alert to handle"); } }
+	 * 
+	 * return presentFlag; }
+	 */
+
 	@Override
 	public boolean Alert(WebDriver driver) {
 		boolean presentFlag = false;
 		Alert alert = null;
 
-		try {
-			// Check the presence of alert
-			alert = driver.switchTo().alert();
-			// if present consume the alert
-			alert.accept();
-			presentFlag = true;
-		} catch (NoAlertPresentException ex) {
-			// Alert present; set the flag
+		// Create WebDriverWait instance to wait for the alert to be present
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-			// Alert not present
+		try {
+			// Wait until the alert is present
+			wait.until(ExpectedConditions.alertIsPresent());
+
+			// Switch to the alert and accept it
+			alert = driver.switchTo().alert();
+			alert.accept();
+
+			presentFlag = true;
+			System.out.println("The Alert was handled successfully");
+		} catch (NoAlertPresentException ex) {
+			// If no alert is present, log the message
+			System.out.println("No alert present");
 			ex.printStackTrace();
-		} finally {
-			if (!presentFlag) {
-				System.out.println("The Alert is handled successfully");		
-			} else{
-				System.out.println("There was no alert to handle");
-			}
+		} catch (Exception e) {
+			// Catch any other exceptions
+			System.out.println("An error occurred while handling the alert: " + e.getMessage());
 		}
 
 		return presentFlag;
 	}
+
 	@Override
-	public boolean launchUrl(WebDriver driver,String url) {
+	public boolean launchUrl(WebDriver driver, String url) {
 		boolean flag = false;
 		try {
 			driver.navigate().to(url);
@@ -672,38 +696,35 @@ public class Action extends BaseClass implements ActionInterface {
 			return false;
 		} finally {
 			if (flag) {
-				System.out.println("Successfully launched \""+url+"\"");				
+				System.out.println("Successfully launched \"" + url + "\"");
 			} else {
-				System.out.println("Failed to launch \""+url+"\"");
+				System.out.println("Failed to launch \"" + url + "\"");
 			}
 		}
 	}
-	
+
 	@Override
-	public boolean isAlertPresent(WebDriver driver) 
-	{ 
-		try 
-		{ 
-			driver.switchTo().alert(); 
-			return true; 
-		}   // try 
-		catch (NoAlertPresentException Ex) 
-		{ 
-			return false; 
-		}   // catch 
+	public boolean isAlertPresent(WebDriver driver) {
+		try {
+			driver.switchTo().alert();
+			return true;
+		} // try
+		catch (NoAlertPresentException Ex) {
+			return false;
+		} // catch
 	}
-	
+
 	@Override
 	public String getTitle(WebDriver driver) {
 		boolean flag = false;
 
 		String text = driver.getTitle();
 		if (flag) {
-			System.out.println("Title of the page is: \""+text+"\"");
+			System.out.println("Title of the page is: \"" + text + "\"");
 		}
 		return text;
 	}
-	
+
 	@Override
 	public String getText(WebElement ele) {
 		boolean flag = false;
@@ -714,18 +735,18 @@ public class Action extends BaseClass implements ActionInterface {
 		}
 		return text;
 	}
-	
+
 	@Override
-	public String getCurrentURL(WebDriver driver)  {
+	public String getCurrentURL(WebDriver driver) {
 		boolean flag = false;
 
 		String text = driver.getCurrentUrl();
 		if (flag) {
-			System.out.println("Current URL is: \""+text+"\"");
+			System.out.println("Current URL is: \"" + text + "\"");
 		}
 		return text;
 	}
-	
+
 	@Override
 	public boolean click1(WebElement locator, String locatorName) {
 		boolean flag = false;
@@ -737,40 +758,42 @@ public class Action extends BaseClass implements ActionInterface {
 			return false;
 		} finally {
 			if (flag) {
-				System.out.println("Able to click on \""+locatorName+"\"");
+				System.out.println("Able to click on \"" + locatorName + "\"");
 			} else {
-				System.out.println("Click Unable to click on \""+locatorName+"\"");
+				System.out.println("Click Unable to click on \"" + locatorName + "\"");
 			}
 		}
 
 	}
-	
+
 	@Override
-	public void fluentWait(WebDriver driver,WebElement element, int timeOut) {
-	    Wait<WebDriver> wait = null;
-	    try {
-	        wait = new FluentWait<WebDriver>((WebDriver) driver)
-	        		.withTimeout(Duration.ofSeconds(20))
-	        	    .pollingEvery(Duration.ofSeconds(2))
-	        	    .ignoring(Exception.class);
-	        wait.until(ExpectedConditions.visibilityOf(element));
-	        element.click();
-	    }catch(Exception e) {
-	    }
+	public void fluentWait(WebDriver driver, WebElement element, int timeOut) {
+		Wait<WebDriver> wait = null;
+		try {
+			wait = new FluentWait<WebDriver>((WebDriver) driver).withTimeout(Duration.ofSeconds(20))
+					.pollingEvery(Duration.ofSeconds(2)).ignoring(Exception.class);
+			wait.until(ExpectedConditions.visibilityOf(element));
+			element.click();
+		} catch (Exception e) {
+		}
 	}
+
 	@Override
 	public void implicitWait(WebDriver driver, int timeOut) {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
+
 	@Override
-	public void explicitWait(WebDriver driver, WebElement element, int timeOut ) {
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(timeOut));
+	public void explicitWait(WebDriver driver, WebElement element, int timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
+
 	@Override
 	public void pageLoadTimeOut(WebDriver driver, int timeOut) {
 		driver.manage().timeouts().pageLoadTimeout(timeOut, TimeUnit.SECONDS);
 	}
+
 	@Override
 	public String screenShot(WebDriver driver, String filename) {
 		String dateName = new SimpleDateFormat("yyyyMMddkkmmss").format(new Date());
@@ -784,10 +807,11 @@ public class Action extends BaseClass implements ActionInterface {
 			e.getMessage();
 		}
 		// This new path for jenkins
-		String newImageString = "http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/" + filename + "_"
-				+ dateName + ".png";
+		String newImageString = "http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/" + filename
+				+ "_" + dateName + ".png";
 		return newImageString;
 	}
+
 	@Override
 	public String getCurrentTime() {
 		String currentDate = new SimpleDateFormat("yyyy-MM-dd-kk:mm:ss").format(new Date());
